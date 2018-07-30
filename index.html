@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <title>SAPO</title>
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link href="style/style.css" type="text/css" rel="stylesheet">
+    </head>
+    <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand " href="#myPage"><img src="images/logocerto.png" class="sapolouco slideanim" height="150"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#sobre">SOBRE</a></li>
+                        <li><a href="#acompanhe">ACOMPANHE</a></li>
+                        <li><a href="#contato">CONTATO</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#myModal">ENTRE</a></li>
+        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="jumbotron text-center">
+            <img src="images/sapao.png">
+            <h1>SAPO</h1> 
+            <div id="log"></div>
+        </div>        
+
+                        <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6 col-md-offset-3">
+                                    <div class="panel panel-login">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <div class="panel-heading">
+                                            <div class="row">
+                                                <div class="col-xs-6">
+                                                    <a href="#" class="active" id="login-form-link">Entrar</a>
+                                                </div>
+                                                <div class="col-xs-6">
+                                                    <a href="#" id="register-form-link">Cadastre-se</a>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <form id="login-form" action="aluno.html"  role="form" style="display: block;">
+                                                        <div class="form-group">
+                                                            <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Id" value="">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Senha">
+                                                        </div>
+                                                        <div class="form-group text-center">
+                                                            <input type="checkbox" tabindex="3" class="" name="remember" id="remember">
+                                                            <label for="remember"> Lembrar </label>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <div class="row">
+                                                                <div class="col-sm-6 col-sm-offset-3">
+                                                                    <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Entrar">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <div class="row">
+                                                                <div class="col-lg-12">
+                                                                    <div class="text-center">
+                                                                        <a href="#" tabindex="5" class="forgot-password">Esqueceu a senha?</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                    <form id="register-form" action="#" method="post" role="form" style="display: none;">
+                                                        <div class="form-group">
+                                                            <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="ID" value="">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="E-mail" value="">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Senha">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirmar senha">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <div class="row">
+                                                                <div class="col-sm-6 col-sm-offset-3">
+                                                                    <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Cadastrar">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        <!-- Sobre -->
+        <div id="sobre" class="container-fluid">
+            <div class="row">
+                <div class="col-sm-8">
+                    <h2 class="slideanim">Sobre</h2><br>
+                    <p class="slideanim">Observou-se que há um grande número de incentivo aos estudantes para a criação ou ingressão de projetos/orientações no instituto, porém verificou-se que não há um incentivo ao entendimento dos mesmos ou dos já existentes além da MOVACI, que ocorre uma vez por ano no instituto, e que não só leva trabalhos do câmpus, mas também de fora. E para incentivar a busca de informação relacionadas a projetos e orientações, foram necessárias reuniões para desenvolver um método que possa facilitar a instigar a conhecer, pois foi observado que não se tem um meio mais prático de buscar essas informações. Com base nisso, surgiu a ideia de desenvolver um sistema web, para que servidores e estudantes do câmpus possam acompanhar mais facilmente os projetos e/ou orientações que se está em atuação no câmpus.</p>
+                </div>
+                <div class="col-sm-4">
+                    <span class="glyphicon glyphicon-pushpin logo slideanim"></span>
+                </div>
+            </div>
+        </div>
+                <!-- Acompanhe -->
+        <div id="acompanhe" class="container-fluid text-center" >
+            <h2 class="slideanim">Acompanhe</h2>
+            <h4 class="slideanim"> Projetos disponíveis no câmpus</h4>
+            <br>
+            <div class="row slideanim">
+                <div class="col-sm-3"  href="#pricing" data-toggle="modal" data-target="#myModalPesquisa">
+                    <span class="glyphicon glyphicon-search logo-small"></span>
+                    <h4>Pesquisa</h4>
+                    <p>Clique para saber mais...</p>
+                </div>
+                    <!-- Modal Pesquisa -->
+                <div class="modal fade" id="myModalPesquisa" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Pesquisa </h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                  <input class="form-control" id="myInput" type="text" placeholder="Pesquise aqui..">
+                                    <table class="table table-striped">
+                                        Acompanhe abaixo os projetos de Pesquisa que estão rolando no câmpus!
+                                    <thead>
+                                        <tr>
+                                            <th>Nome</th>
+                                            <th>Numero</th>
+                                            <th>Orientador</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody id="myTable">
+                                            <tr>
+                                                <td>SAPO-Sistema para o Acompanhamento de Projetos e Orientações</td>
+                                                <td>123456789</td>
+                                                <td>Daniel Pezzi e Leandro</td>
+                                            </tr>
+                                            <tr>
+                                                <td>PlaMoNa</td>
+                                                <td>987654321</td>
+                                                <td>Geovane</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Reverberando</td>
+                                                <td>D568957413</td>
+                                                <td>Leandro</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+      
+                <div class="col-sm-3" href="#pricing" data-toggle="modal" data-target="#myModalEnsino">
+                    <span class="glyphicon glyphicon-file logo-small"></span>
+                    <h4>Ensino</h4>
+                    <p>Clique para saber mais...</p>
+                </div>
+                <!-- Modal Ensino -->
+                <div class="modal fade" id="myModalEnsino" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Ensino </h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                ...
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3"href="#pricing" data-toggle="modal" data-target="#myModalExtensao">
+                    <span class="glyphicon glyphicon-user logo-small"></span>
+                    <h4>Extensão</h4>
+                    <p>Clique para saber mais...</p>
+                </div>
+                <!-- Modal extensão -->
+                <div class="modal fade" id="myModalExtensao" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Extensão </h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                ...
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3" href="#pricing" data-toggle="modal" data-target="#myModalOrientacao">
+                    <span class="	glyphicon glyphicon-resize-full logo-small"></span>
+                    <h4>Orientação</h4>
+                    <p>Clique para saber mais...</p>
+                </div>
+            </div>
+            <!-- Modal Orientação -->
+                <div class="modal fade" id="myModalOrientacao" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Orientação </h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                ...
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <br><br>
+  
+        </div>
+        <div class="container slideanim">
+            <div id="carousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel" data-slide-to="1"></li>
+                    <li data-target="#carousel" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <a href="#acompanhe"><img src="images/acompanhe.png" alt="Acompanhe" style="width:100%;"></a>
+                    </div>
+
+                    <div class="item">
+                        <a href="#" data-toggle="modal" data-target="#myModal"><img src="images/venhaConferir.png" alt="Venha Conferir" style="width:100%;"></a>
+                    </div>
+    
+                    <div class="item">
+                        <a href="http://www.venancio.ifsul.edu.br/portal/" target="_blank"><img src="images/ifsul.png" alt="IFSUL" style="width:100%;"></a>
+                    </div>
+                </div>
+                <a class="left carousel-control" href="#carousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#carousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </div>
+        </div>
+
+
+
+            <!-- Contato -->
+        <div id="contato" class="container-fluid bg-white">
+            <h2 class="text-center">CONTATO</h2>
+            <div class="row">
+                <div class="col-sm-5">
+                    <p>IFSUL Campus Venâncio Aires
+                    </p>
+                    <p><span class="glyphicon glyphicon-map-marker"></span> Avenida das Indústrias, 1865 - Bairro Universitário</p>
+                    <p><span class="glyphicon glyphicon-map-marker"></span> Venâncio Aires/RS - CEP 95.800-000</p>
+                    <p><span class="glyphicon glyphicon-phone"></span> Telefone (51) 3793-4200</p>
+                </div>
+                <div class="col-sm-7 slideanim">
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <input class="form-control" id="name" name="name" placeholder="Nome" type="text" required>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                        </div>
+                    </div>
+                    <textarea style="resize: none" class="form-control" id="comments" name="comments" placeholder="Comentário" rows="5"></textarea><br>
+                    <div class="row">
+                        <div class="col-sm-12 form-group">
+                            <button class="btn btn-default pull-right" type="submit">Enviar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+                <!-- Add Google Maps -->
+        <div id="map" style="height:400px;width:100%;"></div>
+    <script>
+        function initMap() {  
+            var uluru = {lat: -29.6382407, lng: -52.1694201};
+          
+            var map = new google.maps.Map(
+                document.getElementById('map'), {zoom: 15, center: uluru});
+
+            var marker = new google.maps.Marker({position: uluru, map: map});
+        }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3yRB7-VikZIUah07QxCvapO9eF-uYEaw&callback=initMap">
+    </script>
+ 
+
+        <footer class="container-fluid text-center">
+            <a href="#myPage" title="To Top">
+                <span class="glyphicon glyphicon-chevron-up"></span>
+            </a>
+        </footer>
+
+        <script>
+            $(document).ready(function(){
+                $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+                    if (this.hash !== "") {
+                        event.preventDefault();
+                        var hash = this.hash;
+                        $('html, body').animate({
+                            scrollTop: $(hash).offset().top
+                        }, 900, function(){
+                            window.location.hash = hash;
+                        });
+                    }
+                });
+  
+                $(window).scroll(function() {
+                    $(".slideanim").each(function(){
+                        var pos = $(this).offset().top;
+
+                        var winTop = $(window).scrollTop();
+                        if (pos < winTop + 600) {
+                            $(this).addClass("slide");
+                        }
+                    });
+                });
+            })
+        </script>
+        <script type="text/javascript">
+            jQuery(function () {
+                jQuery(window).scroll(function () {
+                    if (jQuery(this).scrollTop() > 900) {
+                        $(".sapolouco").addClass("sapo-diferente");
+                        $(".sapolouco").removeClass("img-circle")
+                    } else {
+                        $(".sapolouco").removeClass("sapo-diferente");
+                        $(".sapolouco").addClass("img-circle")
+                    }
+                });
+            });
+        </script>
+        <script>
+            $(function() {
+
+    $('#login-form-link').click(function(e) {
+		$("#login-form").delay(100).fadeIn(100);
+ 		$("#register-form").fadeOut(100);
+		$('#register-form-link').removeClass('active');
+		$(this).addClass('active');
+		e.preventDefault();
+	});
+	$('#register-form-link').click(function(e) {
+		$("#register-form").delay(100).fadeIn(100);
+ 		$("#login-form").fadeOut(100);
+		$('#login-form-link').removeClass('active');
+		$(this).addClass('active');
+		e.preventDefault();
+	});
+
+});
+        </script>
+        <script>
+          var div = document.getElementById('log');
+            var texto = 'Sistema para o Acompanhamento de Projetos e Orientações';
+
+            function escrever(str, el) {
+                var char = str.split('').reverse();
+                var typer = setInterval(function() {
+                    if (!char.length) return clearInterval(typer);
+                    var next = char.pop();
+                    el.innerHTML += next;
+                }, 65);
+}
+
+            escrever(texto, div);
+</script>
+            <script>
+                $(document).ready(function(){
+                    $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+        
+    </body>
+
+</html>
